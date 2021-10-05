@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VacinaInforma", "VacinaInforma\", "{8F10F288-BA3C-4D63-B4ED-83450D107752}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54742"
+		Debug.AspNetCompiler.PhysicalPath = "VacinaInforma\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54742\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54742"
+		Release.AspNetCompiler.PhysicalPath = "VacinaInforma\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54742\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54742"
+		SlnRelativePath = "VacinaInforma\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F10F288-BA3C-4D63-B4ED-83450D107752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F10F288-BA3C-4D63-B4ED-83450D107752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9507DAAE-A23F-450F-8418-46499CA86716}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Administrador_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/Css.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.6.0.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <title>Vicina Informa - Formulário</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <h5 class="navbar-brand">Vacina Informa</h5>
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse p-1" id="navbarTogglerDemo01">
+                    <div class="navbar-nav col-10">
+                        <a class="nav-link" href="GerenciamentoHome.aspx">Home</a>
+                        <a class="nav-link" href="GerenciamentoEmpresas.aspx">Empresas</a>
+                        <a class="nav-link" href="GerenciamentoVacinados.aspx">Vacinados</a>
+                        <a class="nav-link" href="../QuadroDeVacinamento.aspx">Quadro de Vacinamento</a>
+                        <asp:LinkButton ID="btnCadastraAdm" Visible="false" href="CadastroAdm.aspx"  CssClass="nav-link" runat="server" Text="Cadastrar ADM" />
+                    </div>
+                    <asp:Literal ID="ltl" runat="server"></asp:Literal>
+                    <div class="float-right">
+                        <asp:LinkButton ID="btnSair" CssClass="btn btn-danger btn-block " runat="server" Text="Sair" OnClick="btnSair_Click" />
+                    </div>
+
+
+                </div>
+
+            </nav>
+
+            <div class="row mx-3 mt-4 bg-white" style="border-radius: 5px 5px 5px 5px;">
+
+                <div class="col-12  p-3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</body>
+</html>
