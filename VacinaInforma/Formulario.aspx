@@ -34,7 +34,7 @@
 
                 <div class="col-12  p-4">
 
-                    <div class="col-12 text-left h2 p-2">Formulário</div>
+                    <div class="col-12 text-left h2 p-2">Formulário de Vacinados</div>
 
                     <div class="col-12">
 

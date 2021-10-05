@@ -42,40 +42,48 @@ public partial class Formulario : System.Web.UI.Page
         ddlVacinas.DataTextField = "van_nome";
         ddlVacinas.DataValueField = "van_id";
         ddlVacinas.DataBind();
-        ddlVacinas.Items.Insert(0, "Selecione um Estado");
+        ddlVacinas.Items.Insert(0, "Selecione uma Vacina");
 
     }
 
     protected void btnEviar_Click(object sender, EventArgs e)
     {
-        Vacinados v = new Vacinados();
-        v.Est_id = new Estado();
-        v.Van_id = new Vacinas();
-        v.Vac_nome = txtNome.Text;
-        v.Vac_cpf = txtCpf.Text;
-        v.Vac_qtdDoses = Convert.ToInt32(txtDose.Text);
-        v.Vac_idade = Convert.ToInt32(txtIdade.Text);
-        v.Est_id.Est_id = Convert.ToInt32(ddlEstado.SelectedValue);
-        v.Van_id.Van_id = Convert.ToInt32(ddlVacinas.SelectedValue);
 
+        if (ddlVacinas.SelectedValue == "0")
         {
+            msg = true;
+            ltlMsg.Text = "<div class='text-danger h4'>Campos Preenchido Incorretamete </div>";
+        }
+        else {
+            Vacinados v = new Vacinados();
+            v.Est_id = new Estado();
+            v.Van_id = new Vacinas();
+            v.Vac_nome = txtNome.Text;
+            v.Vac_cpf = txtCpf.Text;
+            v.Vac_qtdDoses = Convert.ToInt32(txtDose.Text);
+            v.Vac_idade = Convert.ToInt32(txtIdade.Text);
+            v.Est_id.Est_id = Convert.ToInt32(ddlEstado.SelectedValue);
+            v.Van_id.Van_id = Convert.ToInt32(ddlVacinas.SelectedValue);
 
-            switch (VacinadosPercistecia.CadastroVacinado(v))
             {
 
-                case 0:
+                switch (VacinadosPercistecia.CadastroVacinado(v))
+                {
 
-                    msg = true;
-                    ltlMsg.Text = "<div class='text-success h4'> Cadastrado </div>";
-                    atualizarPagina();
-                    break;
+                    case 0:
 
-                case -2:
-                    msg = true;
-                    ltlMsg.Text = "<div class='text-danger h4'>Campos Preenchido Incorretamete </div>";
-                    break;
+                        msg = true;
+                        ltlMsg.Text = "<div class='text-success h4'> Cadastrado </div>";
+                        atualizarPagina();
+                        break;
+
+                    case -2:
+                        msg = true;
+                        ltlMsg.Text = "<div class='text-danger h4'>Campos Preenchido Incorretamete </div>";
+                        break;
+                }
             }
-        }
+        } 
     }
 
 }
