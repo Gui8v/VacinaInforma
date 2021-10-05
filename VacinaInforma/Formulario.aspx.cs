@@ -49,10 +49,10 @@ public partial class Formulario : System.Web.UI.Page
     protected void btnEviar_Click(object sender, EventArgs e)
     {
 
-        if (ddlVacinas.SelectedValue == "0")
+        if (ddlVacinas.SelectedIndex == 0)
         {
             msg = true;
-            ltlMsg.Text = "<div class='text-danger h4'>Campos Preenchido Incorretamete </div>";
+            ltlMsg.Text = "<div class='text-danger h4'>Selecione uma Vacina</div>";
         }
         else {
             Vacinados v = new Vacinados();
